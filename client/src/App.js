@@ -3,7 +3,6 @@ import API from "./Api";
 import Title from "./components/Title/Title";
 import Form from "./components/Form/Form";
 import Data from "./components/Data/Data";
-import "./App.css";
 
 export default function App() {
   const [list, setList] = useState([]);
@@ -18,7 +17,7 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <Title />
       <Form requestList={requestList} API={API} />
       <Data list={list} />

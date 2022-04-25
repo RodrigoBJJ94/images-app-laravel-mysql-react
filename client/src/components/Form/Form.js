@@ -4,7 +4,6 @@ import "./Form.css";
 export default function Form({ requestList, API }) {
     const [image, setImage] = useState(null);
     const [subtitle, setSubtitle] = useState("");
-
     const imageRef = useRef();
 
     const handleSubmit = async (event) => {
@@ -19,8 +18,20 @@ export default function Form({ requestList, API }) {
     return (
         <div className="divForm">
             <form onSubmit={handleSubmit} className="form">
-                <input type="file" name="image" ref={imageRef} onChange={event => setImage(event.target.files[0])} className="inputImage" />
-                <input type="text" name="subtitle" placeholder="Type the subtitle" value={subtitle} onChange={event => setSubtitle(event.target.value)} className="inputSubtitle" />
+                <input
+                    type="file"
+                    name="image"
+                    ref={imageRef}
+                    className="inputImage"
+                    onChange={event => setImage(event.target.files[0])} />
+                <input
+                    type="text"
+                    name="subtitle"
+                    placeholder="Type the subtitle"
+                    value={subtitle}
+                    className="inputSubtitle"
+                    onChange={event => setSubtitle(event.target.value)} />
+                <hr></hr>
                 <button className="buttonForm">Send Image</button>
             </form>
         </div>
