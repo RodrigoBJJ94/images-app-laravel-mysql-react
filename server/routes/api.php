@@ -17,24 +17,21 @@ use Intervention\Image\Facades\Image;
 */
 
 Route::post('upload', function (Request $request) {
-
-  
     $subtitle = $request->get('subtitle');
     $image = $request->file('image');
     $imageName = $image->store('photos');
     $path = Storage::path($imageName);
 
-
     $newImg = Image::make($path)->resize(400, 400, function ($c) {
         $c->aspectRatio();
         $c->upsize();
     })->save();
-    
+
     $photo = new App\Photo();
     $photo->url = $imageName;
     $photo->subtitle = $subtitle;
     $photo->save();
-    
+
     return ['status' => 'ok'];
 });
 

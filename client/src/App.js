@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import API from "./Api";
 import './App.css';
-import PhotoItem from "./PhotoItem";
+import Data from "./components/Data/Data";
 
 export default function App() {
   const imageRef = useRef();
@@ -37,11 +37,7 @@ export default function App() {
           <button>Enviar foto</button>
         </form>
       </div>
-      <div>
-        {list.map((item, index) => (
-          <PhotoItem key={index} data={item} />
-        ))}
-      </div>
+      <Data list={list} />
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.divMap {
+    display: flex;
+    flex-direction: row;
+}
+
+.divData {
+    flex-direction: column;
+    margin: 10px;
+}
+
+.image {
+    width: 500px;
+}
+
+.subtitle {
+
+}
