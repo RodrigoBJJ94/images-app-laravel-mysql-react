@@ -1,0 +1,26 @@
+.divForm {
+    display: block;
+    text-align: center;
+}
+
+.form {
+
+}
+
+.inputImage {
+
+}
+
+.inputSubtitle {
+    
+}
+
+.buttonForm {
+    background-color: aqua;
+    margin-left: 20px;
+    width: 180px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+}

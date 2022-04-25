@@ -1,5 +1,5 @@
 import React from "react";
-import './Styles.css';
+import "./Data.css";
 
 export default function Data({ list }) {
     return (
