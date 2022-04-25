@@ -31,7 +31,7 @@ export default function Form({ requestList, API }) {
                     value={subtitle}
                     className="inputSubtitle"
                     onChange={event => setSubtitle(event.target.value)} />
-                <hr></hr>
+                <br></br>
                 <button className="buttonForm">Send Image</button>
             </form>
         </div>
